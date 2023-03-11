@@ -2,10 +2,11 @@ import java.util.TreeMap;
 import java.util.Map;
 import java.util.*;
 
-public class TreeMap {
-    TreeMap TMap = new TreeMap();
+public class MapaT {
+    Scanner in = new Scanner(System.in);
+    TreeMap T = new TreeMap();
     public void AgregarTMap(){
-
+        T.put(in, T);
     }
     public void MostrarTipoTMap(){
 
