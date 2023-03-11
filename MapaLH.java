@@ -2,25 +2,25 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.*;
 
-public class MapaLH {
+public class MapaLH implements Interfaz{
     Scanner in = new Scanner(System.in);
     LinkedHashMap LH = new LinkedHashMap();
-    public void AgregarLHMap(){
+    public void AgregarMap(){
         LH.put(in, LH);
     }
-    public void MostrarTipoLHMap(){
+    public void MostrarTipoMap(){
 
     }
-    public void MostrarTodoUsuarioLHMap(){
+    public void MostrarTodoUsuarioMap(){
 
     }
-    public void MostrarTodoUsuarioOrdenadoLHMap(){
+    public void MostrarTodoUsuarioOrdenadoMap(){
 
     }
-    public void MostrarExistentesLHMap(){
+    public void MostrarExistentesMap(){
 
     }
-    public void MostrarExistentesOrdenadoLHMap(){
+    public void MostrarExistentesOrdenadoMap(){
         
     }
 }
