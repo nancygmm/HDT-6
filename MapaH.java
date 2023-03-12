@@ -21,11 +21,27 @@ public class MapaH implements Interfaz{
     }
     @Override
     public void MostrarTodoUsuarioMap(){
-
+        System.out.println(H);
     }
     @Override
-    public void MostrarTodoUsuarioOrdenadoMap(){
+    public void MostrarTodoUsuarioOrdenadoMap(){ 
+        List<Map.Entry<Integer, String>> list =
+                new ArrayList<>(H.entrySet());
 
+        Collections.sort(list, new Comparator<Map.Entry<Integer, String>>() {
+            public int compare(Map.Entry<Integer, String> o1,
+                               Map.Entry<Integer, String> o2) {
+                return o1.getValue().compareTo(o2.getValue());
+            }
+        });
+
+        LinkedHashMap<Integer, String> sortedMap = new LinkedHashMap<>();
+        for (Map.Entry<Integer, String> entry : list) {
+            sortedMap.put(entry.getKey(), entry.getValue());
+        }
+
+        System.out.println("Original HashMap: " + H);
+        System.out.println("Sorted HashMap by value: " + sortedMap);
     }
     @Override
     public void MostrarExistentesMap(){

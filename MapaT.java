@@ -11,7 +11,13 @@ public class MapaT implements Interfaz{
     }
     @Override
     public void MostrarTipoMap(){
-
+        System.out.println("Ingrese la carta de la quiere saber el tipo");
+        String carta = in.next();
+        for(int i=0; i<T.size();i++){
+            if(T.containsKey(carta)){
+                System.out.println(T.get(carta));
+            }    
+        }
     }
     @Override
     public void MostrarTodoUsuarioMap(){
