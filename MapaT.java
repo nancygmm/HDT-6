@@ -6,11 +6,11 @@ public class MapaT implements Interfaz{
     Scanner in = new Scanner(System.in);
     TreeMap T = new TreeMap();
     @Override
-    public void AgregarMap(){
+    public void AgregarMap(String carta, String tip){
         T.put(in, T);
     }
     @Override
-    public void MostrarTipoMap(){
+    public void MostrarTipoMap(String obj){
         System.out.println("Ingrese la carta de la quiere saber el tipo");
         String carta = in.next();
         for(int i=0; i<T.size();i++){
@@ -21,7 +21,7 @@ public class MapaT implements Interfaz{
     }
     @Override
     public void MostrarTodoUsuarioMap(){
-
+        System.out.println(T);
     }
     @Override
     public void MostrarTodoUsuarioOrdenadoMap(){

@@ -1,6 +1,6 @@
 public interface Interfaz {
-    void AgregarMap();
-    void MostrarTipoMap();
+    void AgregarMap(String carta, String tipo);
+    void MostrarTipoMap(String obj);
     void MostrarTodoUsuarioMap();
     void MostrarTodoUsuarioOrdenadoMap();
     void MostrarExistentesMap();

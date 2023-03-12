@@ -1,14 +1,8 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.*;
+public class MapaV implements Interfaz{
 
-public class MapaH implements Interfaz{
-    Scanner in = new Scanner(System.in);
-    HashMap <String, String> H = new HashMap<String, String>();
-    
     @Override
     public void AgregarMap(String carta, String tipo){
-        H.put(carta, tipo);
+    
     }
     @Override
     public void MostrarTipoMap(String obj){
@@ -16,7 +10,7 @@ public class MapaH implements Interfaz{
     }
     @Override
     public void MostrarTodoUsuarioMap(){
-        System.out.println(H);
+      
     }
     @Override
     public void MostrarTodoUsuarioOrdenadoMap(){ 
@@ -31,4 +25,3 @@ public class MapaH implements Interfaz{
         
     }
 }
-
