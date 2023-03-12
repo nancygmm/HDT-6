@@ -4,15 +4,24 @@ import java.util.Scanner;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        Factory Mapa = new Factory();
-        Scanner in = new Scanner(System.in);
-        System.out.println("Bienvenido, a continuación se muestran las opciones disponibles para la creación de MAPAS");
-        System.out.println("1. HashMap");
-        System.out.println("2. TreeMap");
-        System.out.println("3. LinkedHashMap");
-        System.out.println("4. Salir");
-        String x = in.next();
-        Interfaz inter = Mapa.NuevoMapa(x);
+        
+        HashMap<String, String> MapaHP = new HashMap<String, String>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(
+                "/Users/nancymazariegos/Documents/Tareas Tercer Semestre/Algoritmos y Estructuras de Datos/HDT-6/HDT-6/cards_desc.txt"))) {
+            String line;
+
+            while ((line = br.readLine()) != null) {
+
+                String[] cadena = line.split("\\|");
+                MapaHP.put(cadena[0].trim(), cadena[1].trim());
+                System.out.println(MapaHP);
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error reading file: " + e.getMessage());
+            System.exit(1);
+        }
 
     }
 }
