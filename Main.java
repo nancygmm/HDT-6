@@ -58,7 +58,7 @@ public class Main {
             inter.AgregarMap(carta, valor);
         } else if (z==2){
             System.out.println("Ingrese el nombre de la carta de la que quiere saber el tipo");
-            String obj = in.nextLine();
+            String obj = sc.next();
             inter.MostrarTipoMap(obj);
         } else if (z==3){
             inter.MostrarTodoUsuarioMap();
