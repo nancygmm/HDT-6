@@ -52,13 +52,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         if (z==1){
             System.out.println("Ingrese el nombre de la carta que desea ingresar");
-            String carta = sc.next();
+            String carta = sc.nextLine();
             String valor = MapaP.get(carta);
             MapaP.remove(valor);
             inter.AgregarMap(carta, valor);
         } else if (z==2){
             System.out.println("Ingrese el nombre de la carta de la que quiere saber el tipo");
-            String obj = in.next();
+            String obj = in.nextLine();
             inter.MostrarTipoMap(obj);
         } else if (z==3){
 
