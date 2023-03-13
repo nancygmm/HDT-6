@@ -10,6 +10,8 @@ Sección: 20
 */
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.*;
 public class Main {
@@ -41,6 +43,7 @@ public class Main {
         }
         String a = "";
         while (!"No".equals(a)){
+        Scanner sc = new Scanner(System.in);
         System.out.println("A continuación se presentan las siguientes opciones:");
         System.out.println("1. Agregar una carta");
         System.out.println("2. Mostrar el tipo de una carta");
@@ -49,44 +52,53 @@ public class Main {
         System.out.println("5. Mosrar nombre y tipo existentes");
         System.out.println("6. Mostrar nombre y tipo existentes (ordenadas)");
         int z = in.nextInt();
-        Scanner sc = new Scanner(System.in);
-        if (z==1){
-            System.out.println("Ingrese el nombre de la carta que desea ingresar");
-            String carta = sc.nextLine();
-            String valor = MapaP.get(carta);
-            MapaP.remove(valor);
-            inter.AgregarMap(carta, valor);
-        } else if (z==2){
-            System.out.println("Ingrese el nombre de la carta de la que quiere saber el tipo");
-            String obj = sc.next();
-            inter.MostrarTipoMap(obj);
-        } else if (z==3){
-            inter.MostrarTodoUsuarioMap();
-        } else if (z==4){
-            inter.MostrarTodoUsuarioOrdenadoMap();
-        } else if (z==5){
-            System.out.println(MapaP);
-
-        } else if (z==6){
-            List<Map.Entry<String, String>> l = new ArrayList<>(MapaP.entrySet());
-
-                    Comparator<Map.Entry<String, String>> c = new Comparator<Map.Entry<String, String>>() {
-                        @Override
-                        public int compare(Map.Entry<String, String> e1, Map.Entry<String, String> e2) {
-                            return e1.getValue().compareTo(e2.getValue());
-                        }
-                    };
-
-                    Collections.sort(l, c);
-
-                    for (Map.Entry<String, String> en : l) {
-                        System.out.println(en.getKey() + " = " + en.getValue());
-                    }
-        } else {
-            System.out.println("Ups, esta opción no existe");
-        }
-        System.out.println("¿Desea continuar?");
+        switch (z){
+            case 1:
+                Scanner s1 = new Scanner(System.in);
+                System.out.println("Ingrese el nombre de la carta que desea ingresar");
+                String carta = s1.nextLine();
+                String valor = MapaP.get(carta);
+                
+                inter.AgregarMap(carta, valor);
+                System.out.println(carta + valor);
+                break;
+            case 2:
+                Scanner s2 = new Scanner(System.in);
+                System.out.println("Ingrese el nombre de la carta de la que quiere saber el tipo");
+                String obj = s2.nextLine();
+                System.out.println(obj + " " + MapaP.get(obj));
+                inter.MostrarTipoMap(obj);
+                break;
+            case 3:
+                inter.MostrarTodoUsuarioMap();
+                break;
+            case 4:
+                inter.MostrarTodoUsuarioOrdenadoMap();
+                break;
+            case 5:
+                System.out.println(MapaP);
+                break;
+    
+            case 6:
+                List<Map.Entry<String, String>> l = new ArrayList<>(MapaP.entrySet());
+    
+                        Comparator<Map.Entry<String, String>> c = new Comparator<Map.Entry<String, String>>() {
+                            @Override
+                            public int compare(Map.Entry<String, String> e1, Map.Entry<String, String> e2) {
+                                return e1.getValue().compareTo(e2.getValue());
+                            }
+                        };
+    
+                        Collections.sort(l, c);
+    
+                        for (Map.Entry<String, String> en : l) {
+                            System.out.println(en.getKey() + " = " + en.getValue());
+            }
+            System.out.println("¿Desea continuar?");
             a = sc.next();
+        }
+        
+        
         }
     }
 }

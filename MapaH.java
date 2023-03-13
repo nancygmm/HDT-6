@@ -8,8 +8,8 @@ Hoja de Trabajo 6
 Curso: Algoritmos y Estructuras de datos
 Sección: 20
 */
+import java.util.HashMap;
 import java.util.*;
-import java.util.Map.Entry;
 
 public class MapaH implements Interfaz{
     Scanner in = new Scanner(System.in);
@@ -21,9 +21,9 @@ public class MapaH implements Interfaz{
     }
     @Override
     public void MostrarTipoMap(String obj){
-     if (H.containsKey(obj)){
-        String k = H.get(obj);
-        System.out.println(k);
+        if (H.containsKey(obj)){
+            String k = H.get(obj);
+            System.out.println(k);
      }
     }
     @Override
