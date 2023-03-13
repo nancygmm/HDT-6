@@ -45,7 +45,7 @@ public class Main {
         System.out.println("1. Agregar una carta");
         System.out.println("2. Mostrar el tipo de una carta");
         System.out.println("3. Mostar nombre y tipo");
-        System.out.println("4. Nostar nombre y tipo (ordenadas)");
+        System.out.println("4. mostar nombre y tipo (ordenadas)");
         System.out.println("5. Mosrar nombre y tipo existentes");
         System.out.println("6. Mostrar nombre y tipo existentes (ordenadas)");
         int z = in.nextInt();
@@ -61,14 +61,27 @@ public class Main {
             String obj = in.nextLine();
             inter.MostrarTipoMap(obj);
         } else if (z==3){
-
+            inter.MostrarTodoUsuarioMap();
         } else if (z==4){
-
+            inter.MostrarTodoUsuarioOrdenadoMap();
         } else if (z==5){
             System.out.println(MapaP);
 
         } else if (z==6){
+            List<Map.Entry<String, String>> l = new ArrayList<>(MapaP.entrySet());
 
+                    Comparator<Map.Entry<String, String>> c = new Comparator<Map.Entry<String, String>>() {
+                        @Override
+                        public int compare(Map.Entry<String, String> e1, Map.Entry<String, String> e2) {
+                            return e1.getValue().compareTo(e2.getValue());
+                        }
+                    };
+
+                    Collections.sort(l, c);
+
+                    for (Map.Entry<String, String> en : l) {
+                        System.out.println(en.getKey() + " = " + en.getValue());
+                    }
         } else {
             System.out.println("Ups, esta opción no existe");
         }
