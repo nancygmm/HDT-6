@@ -1,3 +1,13 @@
+/*
+Profesor: Douglas Leonel Barrios
+Auxiliares: Fernanda Esquivel y Francisco Castillo
+INTEGRANTES: 
+Nancy Gabriela Mazariegos Molina, 22513
+12/03/2023
+Hoja de Trabajo 6
+Curso: Algoritmos y Estructuras de datos
+Sección: 20
+*/
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Scanner;
@@ -51,7 +61,7 @@ public class Main {
             String obj = in.next();
             inter.MostrarTipoMap(obj);
         } else if (z==3){
-            
+
         } else if (z==4){
 
         } else if (z==5){
