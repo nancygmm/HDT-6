@@ -1,13 +1,12 @@
 import java.util.TreeMap;
-import java.util.Map;
 import java.util.*;
 
 public class MapaT implements Interfaz{
     Scanner in = new Scanner(System.in);
-    TreeMap T = new TreeMap();
+    TreeMap <String, String> T = new TreeMap <String, String>();
     @Override
-    public void AgregarMap(String carta, String tip){
-        T.put(in, T);
+    public void AgregarMap(String carta, String tipo){
+        T.put(carta, tipo);
     }
     @Override
     public void MostrarTipoMap(String obj){

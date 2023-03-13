@@ -15,11 +15,11 @@ public class Main {
         Interfaz inter = Mapa.NuevoMapa(x);
         HashMap<String, String> MapaP = new HashMap<String, String>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(
+        try (BufferedReader lector = new BufferedReader(new FileReader(
                 "/Users/nancymazariegos/Documents/Tareas Tercer Semestre/Algoritmos y Estructuras de Datos/HDT-6/HDT-6/cards_desc.txt"))) {
             String line;
 
-            while ((line = br.readLine()) != null) {
+            while ((line = lector.readLine()) != null) {
 
                 String[] cadena = line.split("\\|");
                 MapaP.put(cadena[0].trim(), cadena[1].trim());
@@ -51,16 +51,16 @@ public class Main {
             String obj = in.next();
             inter.MostrarTipoMap(obj);
         } else if (z==3){
-
+            
         } else if (z==4){
 
         } else if (z==5){
+            System.out.println(MapaP);
 
         } else if (z==6){
 
         } else {
             System.out.println("Ups, esta opción no existe");
-            a = sc.next();
         }
         System.out.println("¿Desea continuar?");
             a = sc.next();

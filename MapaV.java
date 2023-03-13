@@ -1,27 +1,15 @@
 public class MapaV implements Interfaz{
 
     @Override
-    public void AgregarMap(String carta, String tipo){
-    
-    }
+    public void AgregarMap(String carta, String tipo){}
     @Override
-    public void MostrarTipoMap(String obj){
-     
-    }
+    public void MostrarTipoMap(String obj){}
     @Override
-    public void MostrarTodoUsuarioMap(){
-      
-    }
+    public void MostrarTodoUsuarioMap(){}
     @Override
-    public void MostrarTodoUsuarioOrdenadoMap(){ 
-        
-    }
+    public void MostrarTodoUsuarioOrdenadoMap(){}
     @Override
-    public void MostrarExistentesMap(){
-
-    }
+    public void MostrarExistentesMap(){}
     @Override
-    public void MostrarExistentesOrdenadoMap(){
-        
-    }
+    public void MostrarExistentesOrdenadoMap(){}
 }

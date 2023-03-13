@@ -1,13 +1,12 @@
 import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.*;
 
 public class MapaLH implements Interfaz{
     Scanner in = new Scanner(System.in);
-    LinkedHashMap LH = new LinkedHashMap();
+    LinkedHashMap <String, String> LH = new LinkedHashMap <String, String>();
     @Override
-    public void AgregarMap(String carta, String tip){
-        LH.put(in, LH);
+    public void AgregarMap(String carta, String tipo){
+        LH.put(carta, tipo);
     }
     @Override
     public void MostrarTipoMap(String obj){
