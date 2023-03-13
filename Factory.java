@@ -11,11 +11,11 @@ Sección: 20
 public class Factory {
 
     public Interfaz NuevoMapa(String newMapa){
-        if (newMapa.equalsIgnoreCase("HashMap")){
+        if (newMapa.equalsIgnoreCase("1")){
             return new MapaH();
-        } else if (newMapa.equalsIgnoreCase("TreeMap")){
+        } else if (newMapa.equalsIgnoreCase("2")){
             return new MapaT();
-        } else if (newMapa.equalsIgnoreCase("LinkedHashMap")){
+        } else if (newMapa.equalsIgnoreCase("3")){
             return new MapaLH();
         } else {
             return new MapaV();
